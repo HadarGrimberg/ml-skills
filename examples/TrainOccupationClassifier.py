@@ -1,3 +1,4 @@
+# python interpreter: ml_skills
 from skills_ml.storage import ModelStorage, FSStore
 
 from skills_ml.job_postings.common_schema import  JobPostingCollectionSample
@@ -20,8 +21,10 @@ import multiprocessing
 num_of_worker = multiprocessing.cpu_count()
 
 
+# Load a sample of job posts
 job_samples = JobPostingCollectionSample()
 job_postings = list(job_samples)
+# occupationalCategory is from onet
 
 random.shuffle(job_postings)
 
